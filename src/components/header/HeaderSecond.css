@@ -1,0 +1,146 @@
+.header {
+    font-family: 'inter';
+    width: 100%;
+    min-height: 120px;
+    max-height: 100%;
+    background-color: #71CEF0;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu {
+    min-height: 120px;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menu__list {
+    margin-right: 10%;
+}
+
+.logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+.logo img{
+    object-fit: cover;
+}
+
+.logo__name {
+    margin-left: 25px;
+    font-size: 3rem;
+}
+
+.menu__list_item {
+    list-style-type: none;
+    display: inline;
+    margin-left: 60px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.menu__list_item:hover {
+    border-bottom: 2px solid white;
+    transition: ease-in-out all 0.1s;
+}
+
+.burger {
+    height: 30px;
+    width: 30px;
+    left: 10%;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .burger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  
+  .burger:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  
+  .burger .burger__item {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 30px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  
+  
+  @media screen and (max-width: 1230px) {
+    .menu__list {
+      margin-right: 5%;
+    }
+  
+    .menu__list_item {
+      list-style-type: none;
+      display: inline;
+      margin-left: 30px;
+      font-weight: 400;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .header{
+        min-height: 120px;
+        max-height: 80%;
+    }
+    .menu {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  
+    .menu .logo {
+      margin-right: 10%;
+    }
+  
+    .logo img {
+      background-size: cover;
+    }
+  
+    .menu__list {
+      transform: translateY(-200%);
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 650px){
+    .logo__name{
+        display: none;
+    }
+    .logo img{
+      width: 15vw;
+
+  }
+}
+
