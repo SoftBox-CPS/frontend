@@ -1,0 +1,8 @@
+hr {
+    border: 0;
+    background-color: #84dbfa;
+}
+
+hr:not([size]) {
+    height: 5px;
+}

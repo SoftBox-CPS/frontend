@@ -1,0 +1,15 @@
+.info_header {
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+button.info_header{
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+.logo_img {
+    display: inline-block;
+    height: 100px;
+    max-width: 100%;
+}

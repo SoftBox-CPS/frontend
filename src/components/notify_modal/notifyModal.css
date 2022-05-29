@@ -1,0 +1,15 @@
+.success{
+    background-color: #98FB98;
+}
+
+.error{
+    background-color: #FFB2B2;
+}
+
+.success_icon{
+    color: green;
+}
+
+.error_icon{
+    color: indianred;
+}
