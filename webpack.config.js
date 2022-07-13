@@ -37,7 +37,7 @@ const getSettingsForStyle = (withModules = false) => {
 
 module.exports = {
   entry: path.join(srcPath, 'index.jsx'),
-  target: isProd ? 'browserList' : 'web', //process.env.NODE_ENV === 'development' ? 'web' : 'browserslist',
+  target: isProd ? 'browserList' : 'web',
   plugins,
   output: {
     path: buildPath,
@@ -48,6 +48,9 @@ module.exports = {
     host: '127.0.0.1',
     port: 8800,
     hot: true,
+  },
+  resolve: {
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
   },
   module: {
     rules: [
