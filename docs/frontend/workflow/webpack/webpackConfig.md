@@ -1,3 +1,3 @@
 # Webpack
 
-This filder anout webpack plugins config and build commands
+This folder about webpack plugins config and build commands
