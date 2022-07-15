@@ -1,3 +1,5 @@
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
@@ -18,6 +20,10 @@ module.exports = merge(common, {
     hot: true,
     port: 8080,
   },
+
+  // Plugins
+  // ?ReactRefreshPlugin enable "Fast Refresh" for React Components
+  plugins: [new ReactRefreshPlugin()],
 
   module: {
     rules: [
