@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -64,8 +66,9 @@ module.exports = {
     modules: [paths.src, 'node_modules'],
     extensions: ['.json', '.jsx', '.js', '.tsx', '.ts'],
     alias: {
-      '@': paths.src,
-      assets: paths.public,
+      components: path.join(paths.src, 'components'),
+      styles: path.join(paths.src, 'styles'),
+      pages: path.join(paths.src, 'pages'),
     },
   },
 };
