@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "noEmit": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "components": [
+        "components"
+      ],
+      "styles": [
+        "styles"
+      ],
+      "pages": [
+        "pages"
+      ],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "declarations.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
