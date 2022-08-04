@@ -1,0 +1,17 @@
+@mixin inter_normal($size, $weight, $height, $color){
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin inter_italic($size, $weight, $height, $color){
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
