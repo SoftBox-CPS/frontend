@@ -1,17 +1,108 @@
-@mixin inter_normal($size, $weight, $height, $color){
-  font-family: Inter, sans-serif;
+@mixin headline1($color: white) {
   font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 0.015em;
+
   color: $color;
 }
 
-@mixin inter_italic($size, $weight, $height, $color){
-  font-family: Inter, sans-serif;
-  font-style: italic;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
+@mixin headline2($color: white) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+
+  color: $color;
+}
+
+@mixin  headline3($color: white) {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 120%;
+
+  color: $color;
+}
+
+@mixin headline4($color: white) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 200.02%;
+
+  color: $color;
+}
+
+@mixin headline5($color: white) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+
+  color: $color;
+}
+
+@mixin text_logo($color: white) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: $color;
+}
+
+@mixin text_description($color: white) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 130%;
+
+  color: $color;
+}
+
+@mixin text_menu($color: white) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+
+  color: $color;
+}
+
+@mixin text($color: white) {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  color: $color;
+}
+
+@mixin text_button($color: white) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: $color;
+}
+
+@mixin text_form_btn($color: white) {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+
+  color: $color;
+}
+
+@mixin text_form_btn_active($color: white) {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+
   color: $color;
 }
