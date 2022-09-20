@@ -69,6 +69,7 @@ module.exports = {
       components: path.join(paths.src, 'components'),
       styles: path.join(paths.src, 'styles'),
       pages: path.join(paths.src, 'pages'),
+      assets: path.join(paths.src, 'assets'),
     },
   },
 };
