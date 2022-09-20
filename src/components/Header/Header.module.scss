@@ -1,6 +1,9 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
 header {
 	align-items: center;
-	background-color: #71CEF0;
+	background-color: $fill_blue;
 	box-sizing: border-box;
 	display: flex;
 
@@ -22,7 +25,7 @@ header {
 }
 
 .logo h1 {
-	color: #FFFFFF;
+	@include text_logo($fill_white);
 
 	margin: 0;
 	margin-left: 25px;
@@ -45,9 +48,6 @@ nav ul {
 }
 
 .nav_link {
-	color: #FFFFFF;
+	@include text_menu($fill_white);
 	text-decoration: none;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 36px;
 }
