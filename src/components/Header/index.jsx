@@ -25,13 +25,21 @@ export default class Header extends React.Component {
         title: 'FAQ',
         to: 'info',
       },
+      {
+        title: 'Login /',
+        to: 'login',
+      },
+      {
+        title: 'Registration',
+        to: 'registration',
+      },
     ];
   }
 
   render() {
     return (
       <header>
-        <NavLink to={''} className={styles.logo}>
+        <NavLink to={'home'} className={styles.logo}>
           <img src={Icon} alt='Softbox' />
           <h1>Softbox</h1>
         </NavLink>
