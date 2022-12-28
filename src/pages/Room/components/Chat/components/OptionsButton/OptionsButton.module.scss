@@ -1,0 +1,20 @@
+.button {
+	align-items: center;
+
+	background-color: rgba(0, 0, 0, 0);
+
+	border: none;
+	border-radius: 50%;
+	outline: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+
+	width: 30px;
+	height: 30px;
+	
+	&:hover {
+		cursor: pointer;
+	}
+}
