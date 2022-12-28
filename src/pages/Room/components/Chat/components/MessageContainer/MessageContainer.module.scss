@@ -1,0 +1,66 @@
+@import "styles/colors.scss";
+
+.container {
+	&_left, &_right {
+		margin-top: 15px;
+		margin-bottom: 15px;
+    
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	&_left {
+		align-items: flex-start;
+	}
+	
+	&_right {
+		align-items: flex-end;
+	}
+}
+
+.title {
+	&_left, &_right {
+		align-items: center;
+		display: flex;
+	}
+
+	&_right {
+		flex-direction: row-reverse;
+	}
+}
+
+.name {
+	color: $fill_black;
+
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 100%;
+
+	margin-left: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	padding: 0;
+}
+
+.message {
+	&_left, &_right {
+		box-sizing: border-box;
+		
+		padding: 10px;
+		margin-top: 10px;
+		max-width: 380px;
+	}
+
+	&_left {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+
+	&_right {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+}
