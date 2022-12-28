@@ -1,0 +1,94 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.container {
+	border: 5px solid  $fill_blue ;
+	border-radius: 5px;
+	box-sizing: border-box;
+
+	width: 861px;
+	height: 475px;
+
+	margin-top: 51px;
+}
+
+.header {
+	align-items: center;
+
+	background-color: $fill_blue;
+	border-radius: 10px;
+
+	width: 861px;
+	height: 70px;
+
+	position: relative;
+	top: -51px;
+	left: -5px;
+
+	display: flex;
+  justify-content: center;
+
+  h3 {
+    @include headline3();
+  
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+
+  height: 397px;
+
+  position: relative;
+  top: -51px;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+}
+
+.input_container {
+  align-items: center;
+
+  border-radius: 10px;
+  border: 1px solid $fill_blue;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: start;
+
+  width: 861px;
+  height: 54px;
+
+  position: relative;
+  padding-left: 41px;
+  padding-right: 50px;
+
+  left: -5px;
+  top: -51px;
+
+  .input {
+    @include text_form_btn($fill_black);
+
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    height: 100%;
+  
+    padding: 0;
+  
+    outline: none;
+    margin-left: 10px;
+    margin-right: 20px;
+
+    width: 88%;
+    
+    &::placeholder {
+      color: $fill_black;
+    }
+  }
+}
