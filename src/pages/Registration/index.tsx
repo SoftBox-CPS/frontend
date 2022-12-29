@@ -1,7 +1,7 @@
-import React from "react";
+import React, {FC} from "react";
 import styles from "./registration-page.module.scss";
 
-const RegistrationPage = () => {
+const RegistrationPage: FC = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Регистрация</h2>

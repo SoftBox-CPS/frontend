@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import styles from "./login-page.module.scss";
 
-const LoginPage = () => {
+const LoginPage: FC = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Вход</h2>

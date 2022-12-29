@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,10 +9,10 @@ import {
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Room from 'pages/Room';
-import LoginPage from 'pages/Login/login-page';
-import RegistrationPage from 'pages/Registration/registration-page';
+import LoginPage from 'pages/Login';
+import RegistrationPage from 'pages/Registration';
 
-const App = () => {
+const App: FC = () => {
   return (
     <Router>
       <Header />
