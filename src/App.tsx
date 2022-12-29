@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,17 +9,20 @@ import {
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Room from 'pages/Room';
+import LoginPage from 'pages/Login';
+import RegistrationPage from 'pages/Registration';
 
-const App = () => {
+const App: FC = () => {
   return (
     <Router>
       <Header />
       <Routes>
         <Route path='/'>
-          <Route path='about' element={<h1>About</h1>} />
-          <Route path='contacts' element={<h1>Contacts</h1>} />
-          <Route path='' element={<h1>Home</h1>} />
-          <Route path='info' element={<h1>Info</h1>} />
+          <Route path='about' element={<h3>About</h3>} />
+          <Route path='contacts' element={<h3>Contacts</h3>} />
+          <Route path='login' element={<LoginPage/>} />
+          <Route path='registration' element={<RegistrationPage/>} />
+          <Route path='info' element={<h3>Info</h3>} />
 
           <Route path='room' element={<Room />} />
 
