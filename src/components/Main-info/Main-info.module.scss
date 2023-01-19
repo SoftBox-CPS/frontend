@@ -1,21 +1,21 @@
 @import "styles/colors.scss";
 
-.main {
+.container {
     font-family: var(--fonts);
     overflow: hidden;
 }
 
-.main__about {
+.about {
     margin: 20% 5% 0px 10%;
 }
 
-.main__about_title {
+.title {
     font-weight: 700;
     font-size: 2.3rem;
     line-height: 58px;
 }
 
-.main__about_text {
+.text {
     display: block;
     width: 90%;
     margin: 0;
@@ -25,7 +25,7 @@
     margin-top: 60px;
 }
 
-.main_title_advantages {
+.advantages {
     margin: 20% 10% 40px 10%;
     font-weight: 700;
     font-size: 2.3rem;
