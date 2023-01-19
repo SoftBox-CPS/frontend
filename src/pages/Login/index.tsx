@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import Footer from "components/Footer";
-import Header from "components/Header";
-import styles from "./login-page.module.scss";
+import React, { FC } from 'react';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import styles from './Login-page.module.scss';
 
 const LoginPage: FC = () => {
   return (
@@ -12,7 +12,9 @@ const LoginPage: FC = () => {
         <input id="login" type="text" name="login" placeholder="Логин" />
         <label>Пароль</label>
         <input id="password" type="text" name="password" placeholder="Пароль" />
-        <button type="button" className={styles.button}>Войти</button>
+        <button type="button" className={styles.button}>
+          Войти
+        </button>
       </form>
     </div>
   );
