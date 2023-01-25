@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './Home.module.scss';
+import './Home-page.module.scss';
 import MainInfo from 'components/Main-info';
 import ContactForm from 'components/Contact-form';
 import RepresentationInfo from 'components/Representation-info';
