@@ -14,6 +14,10 @@ header {
   height: 145px;
 
   padding: 24px 150px;
+
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .logo {
@@ -22,6 +26,10 @@ header {
 
   flex-direction: row;
   text-decoration: none;
+
+  img:hover {
+    transform: scale(1.05);
+  }
 }
 
 .logo h1 {
@@ -29,6 +37,11 @@ header {
 
   margin: 0;
   margin-left: 25px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logo h1:hover {
+  opacity: 0.8;
 }
 
 nav ul {
@@ -51,4 +64,9 @@ nav ul {
 .nav_link {
   @include text_menu($fill_white);
   text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+  opacity: 0.8;
 }

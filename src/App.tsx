@@ -13,15 +13,14 @@ const App: FC = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />}>
-          {/* <Route path="about" element={<h3>About</h3>} />
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="about" element={<h3>About</h3>} />
           <Route path="contacts" element={<h3>Contacts</h3>} /> */}
-          <Route path="login" element={<LoginPage />} />
-          <Route path="registration" element={<RegistrationPage />} />
-          {/* <Route path="info" element={<h3>Info</h3>} /> */}
-          <Route path="room" element={<Room />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
+        <Route path="login" element={<LoginPage />} />
+        <Route path="registration" element={<RegistrationPage />} />
+        {/* <Route path="info" element={<h3>Info</h3>} /> */}
+        <Route path="room" element={<Room />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </Router>

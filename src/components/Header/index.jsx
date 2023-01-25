@@ -39,15 +39,15 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <NavLink to={'home'} className={styles.logo}>
-          <img src={Icon} alt='Softbox' />
+        <NavLink to={'/'} className={styles.logo}>
+          <img src={Icon} alt="Softbox" />
           <h1>Softbox</h1>
         </NavLink>
 
         <nav>
           <ul>
-            {this.navLinks.map(({ title, to }) => (
-              <li>
+            {this.navLinks.map(({ title, to }, i) => (
+              <li key={i}>
                 <NavLink className={styles.nav_link} to={to}>
                   {title}
                 </NavLink>

@@ -37,16 +37,12 @@ const MainInfo: FC = () => {
           <button className={styles.advantages__business_button}>Связаться</button>
         </div>
         <div data-aos="fade-left">
-          <img
-            className={styles.advantages__image}
-            src={process.env.PUBLIC_URL + '/images/man.jpg'}
-            alt="man"
-          />
+          <img className={styles.advantages__image} src="images/man.jpg" alt="man" />
         </div>
       </div>
       <div className={styles.provider}>
         <div data-aos="fade-right" className={styles.provider__image}>
-          <img src={process.env.PUBLIC_URL + '/images/box.jpg'} alt="box" />
+          <img src="images/box.jpg" alt="box" />
         </div>
         <div data-aos="fade-left" className={styles.advantages__provider}>
           <h3 className={styles.advantages__provider_title}>Поставщику</h3>

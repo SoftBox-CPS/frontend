@@ -29,25 +29,24 @@
 }
 
 .input{
-    background-color: $fill_blue;
-    color: $fill_white;
-    border: 0;
-    width: 360px;
-    height: 32px;
-    outline: none;
-    font-size: 1rem;
+  background-color: $fill_blue;
+  color: $fill_white;
+  border: 0;
+  width: 360px;
+  height: 32px;
+  outline: none;
+  font-size: 1rem;
 }
 .input::placeholder{
-    color: #ffffffd2;
+  color: #ffffffd2;
 }
 
 .input_border{
-    position: relative;
-    bottom: 30px;
-    height: 1px;
-    width: 360px;
-    display: block;
-    background-color: $fill_white;
+  height: 1px;
+  width: 360px;
+  position:relative;
+  bottom: 10px;
+  background-color: $fill_white;
 }
 
 
