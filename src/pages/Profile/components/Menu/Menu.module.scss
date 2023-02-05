@@ -1,0 +1,38 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/fonts.scss";
+
+  .container {
+      display: inline-flex;
+      flex-direction: column;
+      padding-inline: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 3px solid $fill_blue;
+      align-items: flex-start;
+      border-radius: 5px;
+
+    .menu_item {
+      @include headline4($fill_blue);
+      position: relative;
+      cursor: pointer;
+      line-height: 2;
+      margin: 15px;
+      text-decoration: none;
+
+    }
+    .menu_item:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $fill_blue;
+      content: "";
+      transition: width 0.3s ease-out;
+    }
+
+    .menu_item:focus:after,
+    .menu_item:hover:after{
+      width: 100%;
+    }
+  }

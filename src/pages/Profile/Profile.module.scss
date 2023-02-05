@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.container {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 0 150px 16px;
+}
+
+.title {
+  @include headline1($fill_blue);
+}
+
+.container_inline{
+  display: flex;
+}
+
+.cont {
+  flex: 1;
+  margin-left: 50px;
+}
+
+

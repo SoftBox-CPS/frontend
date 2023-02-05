@@ -1,0 +1,17 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/fonts.scss";
+
+  .container {
+      display: block;
+      border: 3px solid $fill_blue;
+      align-items: flex-start;
+      border-radius: 5px;
+
+    .info_name {
+      @include text_description($fill_white);
+    }
+
+    .info_content {
+      @include headline3($fill_white);
+    }
+  }
