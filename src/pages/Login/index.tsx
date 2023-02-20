@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import Footer from "components/Footer";
-import Header from "components/Header";
-import styles from "./login-page.module.scss";
+import styles from "./Login.module.scss";
 
 const LoginPage: FC = () => {
   return (
