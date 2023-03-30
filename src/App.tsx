@@ -11,6 +11,7 @@ import Footer from 'components/Footer';
 import Room from 'pages/Room';
 import LoginPage from 'pages/Login';
 import RegistrationPage from 'pages/Registration';
+import Profile from 'pages/Profile';
 
 const App: FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: FC = () => {
           <Route path='info' element={<h3>Info</h3>} />
 
           <Route path='room' element={<Room />} />
+          <Route path='Account' element={<Profile />} />
 
           <Route path='*' element={<Navigate to='home' replace />} />
         </Route>

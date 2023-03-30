@@ -1,0 +1,53 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.container {
+  align-items: flex-start;
+  border: 3px solid $fill_blue;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  padding-top: 26px;
+  padding-left: 55px;
+  padding-bottom: 25px;
+
+  margin-right: 109px;
+
+  width: 331px;
+  height: 424px;
+
+  .menu_item {
+    @include headline4($fill_blue);
+
+    cursor: pointer;
+
+    position: relative;
+    line-height: 43px;
+    margin-bottom: 12px;
+    text-decoration: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: $fill_blue;
+      transition: width 0.3s ease-out;
+    }
+
+    &:focus:after,
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
