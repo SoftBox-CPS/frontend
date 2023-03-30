@@ -1,17 +1,22 @@
-@import "../../../../styles/colors.scss";
-@import "../../../../styles/fonts.scss";
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
 
-  .container {
-      display: block;
-      border: 3px solid $fill_blue;
-      align-items: flex-start;
-      border-radius: 5px;
+.container {
+  align-items: flex-start;
+  border: 3px solid $fill_blue;
+  border-radius: 5px;
+  box-sizing: border-box;
 
-    .info_name {
-      @include text_description($fill_white);
-    }
+  display: block;
+  max-width: 840px;
+  width: 100%;
+  height: 280px;
 
-    .info_content {
-      @include headline3($fill_white);
-    }
+  .info_name {
+    @include text_description($fill_white);
   }
+
+  .info_content {
+    @include headline3($fill_white);
+  }
+}
