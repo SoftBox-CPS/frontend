@@ -1,0 +1,71 @@
+@import "styles/colors.scss";
+@import "styles/fonts.scss";
+
+.headerSection {
+  background-color: $fill_blue;
+  box-sizing: border-box;
+  color: $fill_white;
+  display: flex;
+
+  padding-top: 155px;
+  padding-left: 151px;
+  padding-bottom: 184px;
+
+  width: 100%;
+  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slogan {
+  @include headline1;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.text {
+  @include text_description;
+
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.button {
+  @include text_button;
+
+  background-color: $fill_white;
+  border: $fill_white;
+  border-radius: 5px;
+  color: $fill_blue;
+  cursor: pointer;
+
+  width: 200px;
+  height: 60px;
+  
+  transition: linear all 0.2s;
+
+  &:hover {
+    background-color: #050505;
+    border: #050505;
+    color: $fill_white;
+    
+    transition: linear all 0.2s;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .headerSection {
+    min-height: 520px;
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slogan {
+    font-size: 3rem;
+}
+.text {
+  font-size: 1.3rem;
+}
+}

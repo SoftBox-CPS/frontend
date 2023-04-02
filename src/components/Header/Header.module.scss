@@ -13,7 +13,10 @@ header {
   width: 100%;
   height: 145px;
 
-  padding: 24px 150px;
+  padding: 26px 150px;
+
+  top: 0;
+  z-index: 999;
 }
 
 .logo {
@@ -22,6 +25,10 @@ header {
 
   flex-direction: row;
   text-decoration: none;
+
+  img:hover {
+    transform: scale(1.05);
+  }
 }
 
 .logo h1 {
@@ -29,26 +36,54 @@ header {
 
   margin: 0;
   margin-left: 25px;
+  transition: opacity 0.3s ease-in-out;
 }
 
-nav ul {
+.logo h1:hover {
+  opacity: 0.8;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+}
+
+.nav_list {
+  align-items: center;
   display: flex;
 
-  flex-direction: row;
   justify-content: space-between;
-
-  max-width: 700px;
-  gap: 6px;
-  min-width: 500px;
-  height: 36px;
 
   margin: 0;
   padding: 0;
 
+  width: 560px;
+  height: 36px;
+
   list-style-type: none;
 }
 
+.nav_login {
+  display: flex;
+  margin-left: 40px;
+}
+
+.login_divider {
+  @include text_menu;
+
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
 .nav_link {
-  @include text_menu($fill_white);
+  @include text_menu;
+
   text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+  opacity: 0.8;
 }

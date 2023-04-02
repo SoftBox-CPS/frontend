@@ -1,16 +1,12 @@
 import React, { FC } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Room from 'pages/Room';
 import LoginPage from 'pages/Login';
 import RegistrationPage from 'pages/Registration';
+import HomePage from 'pages/Home';
 import Profile from 'pages/Profile';
 
 const App: FC = () => {

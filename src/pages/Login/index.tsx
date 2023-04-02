@@ -13,7 +13,9 @@ const LoginPage: FC = () => {
         <label>Пароль</label>
         <input id="password" type="text" name="password" placeholder="Пароль" />
         
-        <button type="button" className={styles.button}>Войти</button>
+        <button type="button" className={styles.button}>
+          Войти
+        </button>
       </form>
     </div>
   );

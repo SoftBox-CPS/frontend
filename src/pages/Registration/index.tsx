@@ -1,5 +1,5 @@
-import React, {FC} from "react";
-import styles from "./Registration.module.scss";
+import React, { FC } from 'react';
+import styles from './Registration-page.module.scss';
 
 const RegistrationPage: FC = () => {
   return (
