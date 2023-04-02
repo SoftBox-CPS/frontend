@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import './Home-page.module.scss';
-import MainInfo from 'components/Main-info';
-import ContactForm from 'components/Contact-form';
-import RepresentationInfo from 'components/Representation-info';
+import MainInfo from 'pages/Home/components/Main-info';
+import ContactForm from 'pages/Home/components/Contact-form';
+import RepresentationInfo from 'pages/Home/components/Representation-info';
 
 const HomePage: FC = () => {
   return (
