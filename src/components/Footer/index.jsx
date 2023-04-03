@@ -28,12 +28,12 @@ export default class Footer extends React.Component {
         <h1>Softbox</h1>
 
         <div className={styles.info}>
-          {this.info.map(({ title, text }) => (
-            <section>
+          {this.info.map(({ title, text }, index) => (
+            <section key={index}>
               <h3>{title}</h3>
 
-              {text.map((item) => (
-                <p>{item}</p>
+              {text.map((item, index) => (
+                <p key={index}>{item}</p>
               ))}
             </section>
           ))}
