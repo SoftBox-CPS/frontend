@@ -13,8 +13,11 @@ const App: FC = () => {
   return (
     <Router>
       <Header />
+
       <Routes>
         <Route path='/'>
+          <Route path='' element={<HomePage />}/>
+          
           <Route path='about' element={<h3>About</h3>} />
           <Route path='contacts' element={<h3>Contacts</h3>} />
           <Route path='login' element={<LoginPage/>} />
@@ -27,6 +30,7 @@ const App: FC = () => {
           <Route path='*' element={<Navigate to='home' replace />} />
         </Route>
       </Routes>
+      
       <Footer />
     </Router>
   );
