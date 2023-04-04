@@ -2,13 +2,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function getSettingsForStyle(withModules = false, isProd = false) {
   return [
-    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+    isProd ? {
+      loader: MiniCssExtractPlugin.loader,
+      options: { esModule: false }
+    } : 'style-loader',
     {
       loader: 'css-loader',
       options: isProd
         ? {
             sourceMap: false,
-            importLoaders: 2,
+            importLoaders: 1,
             modules: !withModules ? false : { localIdentName: '[hash:base64]' },
           }
         : {
