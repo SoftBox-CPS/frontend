@@ -1,13 +1,10 @@
 import React, { FC } from 'react';
 import styles from './Main-info.module.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
+import ManImage from 'assets/images/man.jpg';
+import BoxImage from 'assets/images/box.jpg';
 
 const MainInfo: FC = () => {
-  React.useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
   return (
     <div className={styles.container}>
       <div data-aos="fade-left" className={styles.about}>
@@ -52,14 +49,14 @@ const MainInfo: FC = () => {
         </div>
 
         <div data-aos="fade-left">
-          <img className={styles.advantages__image} src="images/man.jpg" alt="man" />
+          <img className={styles.advantages__image} src={ManImage} alt="man" />
         </div>
 
       </div>
 
       <div className={styles.provider}>
         <div data-aos="fade-right" className={styles.provider__image}>
-          <img src="images/box.jpg" alt="box" />
+          <img src={BoxImage} alt="box" />
         </div>
 
         <div data-aos="fade-left" className={styles.advantages__provider}>
