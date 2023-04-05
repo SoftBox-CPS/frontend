@@ -12,7 +12,9 @@ function getSettingsForStyle(withModules = false, isProd = false) {
         ? {
             sourceMap: false,
             importLoaders: 1,
-            modules: !withModules ? false : { localIdentName: '[hash:base64]' },
+            modules: {
+              localIdentName: '[hash:base64]'
+            }
           }
         : {
             sourceMap: true,
@@ -24,11 +26,9 @@ function getSettingsForStyle(withModules = false, isProd = false) {
     },
     {
       loader: 'postcss-loader',
-      options: isProd ? {} : { sourceMap: true },
     },
     {
       loader: 'sass-loader',
-      options: isProd ? {} : { sourceMap: true },
     },
   ];
 }

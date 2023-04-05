@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from 'components/Header';
@@ -9,7 +9,7 @@ import RegistrationPage from 'pages/Registration';
 import HomePage from 'pages/Home';
 import Profile from 'pages/Profile';
 
-const App: FC = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <Header />
