@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styles from './Representation-info.module.scss';
+import styles from './RepresentationInfo.module.scss';
 
 const RepresentationInfo: FC = () => {
   return (

@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import AOS from 'aos';
-import './Home-page.module.scss';
-import MainInfo from 'pages/Home/components/Main-info';
-import ContactForm from 'pages/Home/components/Contact-form';
-import RepresentationInfo from 'pages/Home/components/Representation-info';
+import './HomePage.module.scss';
+import MainInfo from 'pages/Home/components/MainInfo';
+import ContactForm from 'pages/Home/components/ContactForm';
+import RepresentationInfo from 'pages/Home/components/RepresentationInfo';
 
 const HomePage: FC = () => {
   React.useEffect(() => {

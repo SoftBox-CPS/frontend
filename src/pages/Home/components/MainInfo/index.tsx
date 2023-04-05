@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
-import styles from './Main-info.module.scss';
+import React from 'react';
+import styles from './MainInfo.module.scss';
 
 import ManImage from 'assets/images/man.jpg';
 import BoxImage from 'assets/images/box.jpg';
 
-const MainInfo: FC = () => {
+const MainInfo: React.FC = () => {
   return (
     <div className={styles.container}>
       <div data-aos="fade-left" className={styles.about}>

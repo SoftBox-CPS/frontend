@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from 'react';
-import styles from './Contact-form.module.scss';
+import React from 'react';
+import styles from './ContactForm.module.scss';
 
-const ContactForm: FC = () => {
+const ContactForm: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div data-aos="fade-up" className={styles.container}>
