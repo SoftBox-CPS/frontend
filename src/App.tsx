@@ -15,19 +15,17 @@ const App: React.FC = () => {
       <Header />
 
       <Routes>
-        <Route path='/'>
-          <Route path='' element={<HomePage />}/>
-          
-          <Route path='about' element={<h3>About</h3>} />
-          <Route path='contacts' element={<h3>Contacts</h3>} />
-          <Route path='login' element={<LoginPage/>} />
-          <Route path='registration' element={<RegistrationPage/>} />
-          <Route path='info' element={<h3>Info</h3>} />
+        <Route path='/'>          
+          <Route path='About' element={<HomePage />} />
+          <Route path='Contacts' element={<h3>Contacts</h3>} />
+          <Route path='Login' element={<LoginPage/>} />
+          <Route path='Registration' element={<RegistrationPage/>} />
+          <Route path='Info' element={<h3>Info</h3>} />
 
-          <Route path='room' element={<Room />} />
+          <Route path='Room' element={<Room />} />
           <Route path='Account' element={<Profile />} />
 
-          <Route path='*' element={<Navigate to='home' replace />} />
+          <Route path='' element={<Navigate to='/About' replace />} />
         </Route>
       </Routes>
       
