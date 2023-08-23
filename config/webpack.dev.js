@@ -1,14 +1,15 @@
 const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const dotenv = require('dotenv').config({ path: __dirname + '/.env'});
+require('dotenv').config({ path: __dirname + '/.env'});
 
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
 const { getSettingsForStyle } = require('./settings');
+const { DefinePlugin } = require('webpack');
 
+// It's better to define full API URLs
 const {
-  API_URL: url,
-  API_PORT: port
+  API_URL: url
 } = process.env;
 
 module.exports = merge(common, {
@@ -24,21 +25,30 @@ module.exports = merge(common, {
     open: true,
     compress: true,
     hot: true,
-    port: 8080,
+    port: 9000,
     allowedHosts: 'all',
     proxy: {
-      '/api': {
-        target: `${url}:${port}`,
-        pathRewrite: { '^/api': '' },
-        changeOrigin: true,
-      }
+      // '/api': {
+      //   target: process.env.API_URL,
+      //   pathRewrite: { '^/api': '' },
+      //   changeOrigin: true,
+      // },
+      // Proxy all `/api` requests to url 
+      "/api": url
     }
   },
 
   // Plugins
   // ?ReactRefreshPlugin enable "Fast Refresh" for React Components
   plugins: [
-    new ReactRefreshPlugin()
+    new ReactRefreshPlugin(),
+    new DefinePlugin({
+      /**
+       * Replaces API_URL variables with assigned values.
+       * Declare API_URL variable in .ts file (currently declared in types/globals.ts)
+       */
+      API_URL: JSON.stringify("http://localhost:9000/api")
+    })
   ],
 
   module: {
