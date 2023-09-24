@@ -8,6 +8,7 @@ import LoginPage from 'pages/Login';
 import RegistrationPage from 'pages/Registration';
 import HomePage from 'pages/Home';
 import Profile from 'pages/Profile';
+import Rooms from 'pages/Rooms';
 
 const App: React.FC = () => {
   return (
@@ -22,9 +23,10 @@ const App: React.FC = () => {
           <Route path='Registration' element={<RegistrationPage/>} />
           <Route path='Info' element={<h3>Info</h3>} />
 
+          <Route path='Rooms' element={<Rooms />} />
           <Route path='Room' element={<Room />} />
+          
           <Route path='Account' element={<Profile />} />
-
           <Route path='' element={<Navigate to='/About' replace />} />
         </Route>
       </Routes>
