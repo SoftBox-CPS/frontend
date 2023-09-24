@@ -4,11 +4,12 @@ import styles from './SendButton.module.scss';
 
 type SendButtonProps = {
   onClick: (e: React.MouseEvent) => void;
+  disabled?: boolean;
 };
 
-const SendButton: React.FC<SendButtonProps> = ({ onClick }) => {
+const SendButton: React.FC<SendButtonProps> = ({ onClick, disabled=false }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button className={styles.button} onClick={onClick} disabled={disabled}>
       <svg
         width='8'
         height='12'
