@@ -6,6 +6,7 @@ import { login as instanceLogin } from "api-client/account-instance";
 import { basePost } from "api-client";
 
 import { AxiosError, AxiosResponse } from "axios";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage: FC = () => {
   const [formValues, setFormValues] = useState({
@@ -25,6 +26,8 @@ const LoginPage: FC = () => {
       [name]: value
     });
   }
+
+  const navigate = useNavigate();
 
   const processError = (error: AxiosError<LoginErrorPayload>) => setErrors(Object.entries(error?.response?.data ?? []).map(el => el[1]));
 
@@ -60,7 +63,10 @@ const LoginPage: FC = () => {
   const handleSubmit = () => {
     setIsLoading(true);
     instanceLogin(formValues)
-      .then(response => console.log(response as AxiosResponse))
+      .then(response => {
+        console.log(response as AxiosResponse);
+        navigate('/Rooms');
+      })
       /**
        * `error as AxiosError` doesn't inherit LoginErrorPayload type
        * that is passed for `then(response...`
