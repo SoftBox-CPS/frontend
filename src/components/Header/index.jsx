@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Icon from 'assets/images/icon.svg';
 
 import styles from './Header.module.scss';
+import Button from "@mui/material/Button";
 
 export default class Header extends React.Component {
   constructor() {
@@ -29,8 +30,11 @@ export default class Header extends React.Component {
   }
 
   render() {
+
+
     return (
       <header>
+
         <NavLink to={'/'} className={styles.logo}>
           <img src={Icon} alt="Softbox" />
           <h1>Softbox</h1>
@@ -46,16 +50,35 @@ export default class Header extends React.Component {
               </li>
             ))}
           </ul>
+          {
+            this.props.info.userLogin != "" ?
+                <div
+                    // id="welcome"
+                    style={{
+                      marginRight: '20px',
+                      marginLeft: '40px',
+                      display: this.props.info.showContent ? 'block' : 'none' }}
+                >
+                  <h1 style={{color:'whitesmoke'}}>
 
-          <div className={styles.nav_login}>
-            <NavLink className={styles.nav_link} to='login'>Login</NavLink>
-            
-            <svg className={styles.login_divider} width="7" height="36" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.00852 0.295454L1.78977 15.9688H0.409091L4.62784 0.295454H6.00852Z" fill="white"/>
-            </svg>
+                    👋 {this.props.info.userLogin}
+                  </h1>
+                  <p>
+                    <Button variant="outlined" onClick={this.props.handleLogout}>Выйти</Button>
+                  </p>
+                </div>
+                :
+                  <div className={styles.nav_login}>
+                    <NavLink className={styles.nav_link} to='login'>Login</NavLink>
 
-            <NavLink className={styles.nav_link} to='registration'>Registration</NavLink>
-          </div>
+                    <svg className={styles.login_divider} width="7" height="36" viewBox="0 0 7 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.00852 0.295454L1.78977 15.9688H0.409091L4.62784 0.295454H6.00852Z" fill="white"/>
+                    </svg>
+
+                    <NavLink className={styles.nav_link} to='registration'>Registration</NavLink>
+                  </div>
+
+          }
         </nav>
       </header>
     );
